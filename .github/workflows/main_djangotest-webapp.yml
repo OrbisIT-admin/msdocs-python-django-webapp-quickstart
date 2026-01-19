@@ -66,6 +66,7 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8974A7BFBEB8438A845581E357A014F1 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_ED6CAEEF5228407FA916CFA3957EBF67 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_89C08CCAA4004FC2A6E5738A99F84E0C }}
+          environment: AzureUSGovernment
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -73,4 +74,5 @@ jobs:
         with:
           app-name: 'djangotest-webapp'
           slot-name: 'Production'
+
           
